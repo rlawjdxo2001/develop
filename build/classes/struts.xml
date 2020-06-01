@@ -5,9 +5,27 @@
 <struts>
     <!-- アクションのパッケージ定義 -->
     <package name="default" extends="struts-default">
-        <!-- 初期画面 -->
+        <!-- クインターセプター -->
+        <interceptors>
+            <!-- セッションチェックインターセプター -->
+            <interceptor name="cmnChk" class="jp.co.preProcess.cmnChkPreProcess"/>
+        </interceptors>
+
+        <!-- セッションチェックインターセプター -->
+        <default-interceptor-ref name="cmnChk"/>
+
+        <global-results>
+            <result name="goLogin">/view/jsp/cmn001/login.jsp</result>
+        </global-results>
+        <!-- ログイン画面 -->
         <action name="index" class="jp.co.action.IndexAction" method="execute">
             <result name="success">/view/jsp/cmn001/login.jsp</result>
         </action>
+
+        <!-- メイン画面_前処理 -->
+        <action name="noticeBoard.main" class="jp.co.action.noticeBoardMainAction" method="execute">
+            <result name="success">/view/jsp/brd001/noticeBoard.main</result>
+        </action>
+
     </package>
 </struts>
