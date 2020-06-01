@@ -17,11 +17,6 @@ public class IndexAction {
 
     /**
      * [アクション実行処理]<br>
-     * HelloWorldを出力する処理を実行する。<br>
-     * 実行するメソッドは、struts.xmlで指定したメソッド名を使用して実装する。<br>
-     * Struts2ではアクションの処理結果でページの遷移先を決定するが、
-     * 今回は"success"の固定文字列を返却する。<br>
-     * <br>
      * @return
      */
     public String execute() {
