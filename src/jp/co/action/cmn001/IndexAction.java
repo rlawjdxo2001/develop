@@ -1,4 +1,4 @@
-package jp.co.action;
+package jp.co.action.cmn001;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,26 +13,13 @@ public class IndexAction {
     /* ロガー */
     private Logger logger = LogManager.getLogger(IndexAction.class);
 
-    private String name;
-
     /**
      * [アクション実行処理]<br>
      * @return
      */
     public String execute() {
-        logger.info("入力されたパラメータは「{}」です。", name);
         return "success";
     }
-
-
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 
 }

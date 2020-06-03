@@ -1,4 +1,4 @@
-package jp.co.preProcess;
+package jp.co.action.cmn000;
 
 import java.util.Map;
 
@@ -8,10 +8,15 @@ import org.apache.logging.log4j.Logger;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
-public class cmnChkPreProcess extends AbstractInterceptor{
+/**
+ * [cmnChkPreProcessのアクションクラス]<br>
+ * <br>
+ * @author jungtae1.kim
+ */
+public class CmnChkPreProcess extends AbstractInterceptor{
 
     /* ロガー */
-    private Logger logger = LogManager.getLogger(cmnChkPreProcess.class);
+    private Logger logger = LogManager.getLogger(CmnChkPreProcess.class);
 
 
 	@Override
