@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-            
+                
     
-    <wb-module deploy-name="Develop_Online_NoticeBoard">
-                        
+    
+    <wb-module deploy-name="DevelopNoticeBoard">
+                                
+        
         
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-                        
+                                
+        
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-                
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/backUpSql"/>
-                        
+                                
         
-        <property name="context-root" value="Develop_Online_NoticeBoard"/>
-                        
         
-        <property name="java-output-path" value="/Develop_Online_NoticeBoard/build/classes"/>
-                    
+        <property name="java-output-path" value="/DevelopNoticeBoard/build/classes"/>
+        <property name="context-root" value="DevelopNoticeBoard"/>
+                            
+    
     
     </wb-module>
-        
+            
+
 
 </project-modules>

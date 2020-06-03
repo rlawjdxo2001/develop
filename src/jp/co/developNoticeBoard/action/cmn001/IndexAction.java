@@ -1,4 +1,4 @@
-package jp.co.action.cmn001;
+package jp.co.developNoticeBoard.action.cmn001;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
