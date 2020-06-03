@@ -8,24 +8,27 @@
         <!-- クインターセプター -->
         <interceptors>
             <!-- セッションチェックインターセプター -->
-            <interceptor name="cmnChk" class="jp.co.preProcess.cmnChkPreProcess"/>
+            <interceptor name="cmnChk" class="jp.co.action.cmn000.CmnChkPreProcess"/>
         </interceptors>
 
         <!-- セッションチェックインターセプター -->
-        <default-interceptor-ref name="cmnChk"/>
+        <!-- default-interceptor-ref name="cmnChk"/ -->
 
         <global-results>
             <result name="goLogin">/view/jsp/cmn001/login.jsp</result>
         </global-results>
         <!-- ログイン画面 -->
-        <action name="index" class="jp.co.action.IndexAction" method="execute">
+        <action name="index" class="jp.co.action.cmn001.IndexAction" method="execute">
             <result name="success">/view/jsp/cmn001/login.jsp</result>
         </action>
 
-        <!-- メイン画面_前処理 -->
-        <action name="noticeBoard.main" class="jp.co.action.noticeBoardMainAction" method="execute">
-            <result name="success">/view/jsp/brd001/noticeBoard.main</result>
+        <!-- ログイン処理アクション -->
+        <action name="signIn" class="jp.co.action.cmn002.LoginAction" method="execute">
+
+            <result name="ngProcess" type="chain">index</result>
+            <result name="success" type="chain">noticeBoardMain</result>
         </action>
+
 
     </package>
 </struts>
