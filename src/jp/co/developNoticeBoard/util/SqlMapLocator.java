@@ -11,18 +11,18 @@ public class SqlMapLocator {
 
 	public static SqlMapClient getMapper() {
 		SqlMapClient sqlMapper = null;
-		
+
 		try {
 			Reader reader = Resources.getResourceAsReader("SqlMapConfig.xml");
-			
+
 			sqlMapper = SqlMapClientBuilder.buildSqlMapClient(reader);
-			
+
 			reader.close();
-			
+
 		} catch (IOException e) {
 			throw new RuntimeException("sqlMapperの処理途中でエラーが発生しました。", e);
 		}
-		
+
 		return sqlMapper;
 	}
 }
