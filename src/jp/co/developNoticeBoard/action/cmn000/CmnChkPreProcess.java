@@ -1,4 +1,4 @@
-package jp.co.action.cmn000;
+package jp.co.developNoticeBoard.action.cmn000;
 
 import java.util.Map;
 
