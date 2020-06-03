@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="getCmnUserTableParameterMap" type="jp.co.developNoticeBoard.dto.CmnUserTableDto"/>
+
+    <resultMap class="jp.co.developNoticeBoard.dto.CmnUserTableDto" id="getCmnUserTableResultMap">
+        <result property="userSeq" column="userSeq"/>
+        <result property="userId" column="userId"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <!-- ログイン情報取得 -->
+    <select id="getCmnUserTable" parameterClass="getCmnUserTableParameterMap" resultMap="getCmnUserTableResultMap">
+        SELECT
+            USERSEQ as userSeq
+            ,USERID as userId
+            ,PASSWORD as password
+        FROM
+            cmn_user_table
+        WHERE
+            USERID = #userId#
+            and PASSWORD = #password#;
+    </select>
+
+</sqlMap>

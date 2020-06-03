@@ -1,4 +1,4 @@
-package jp.co.developNoticeBoard.action.cmn000;
+package jp.co.developNoticeBoard.intercepter;
 
 import java.util.Map;
 
@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
 /**
  * [cmnChkPreProcessのアクションクラス]<br>
- * <br>
+ * <br>invocation
  * @author jungtae1.kim
  */
 public class CmnChkPreProcess extends AbstractInterceptor{

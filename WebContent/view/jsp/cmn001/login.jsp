@@ -8,7 +8,7 @@
 <link href="./resources/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-	<form class="form-signin" method="post" action="signIn">
+	<form class="form-signin" method="post" action="login">
        <div class="text-center col-12" style="margin-top: 200px;">
 	       <div class="col-4 bg-primary text-white" style="margin:auto;">
 	           <h1>Login</h1>
