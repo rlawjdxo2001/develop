@@ -5,39 +5,19 @@
 <struts>
     <!-- アクションのパッケージ定義 -->
     <package name="default" extends="struts-default">
-
         <!-- クインターセプター -->
         <interceptors>
             <!-- セッションチェックインターセプター -->
             <interceptor name="cmnChk" class="jp.co.developNoticeBoard.intercepter.CmnChkPreProcess"/>
         </interceptors>
-
-        <!-- セッションチェックインターセプター -->
-        <!-- default-interceptor-ref name="cmnChk"/ -->
-
         <global-results>
-            <result name="goLogin">/view/jsp/cmn001/login.jsp</result>
+            <result name="goLogin" type="redirect">../login/index</result>
         </global-results>
-
-        <!-- ログイン画面 -->
-        <action name="index" class="jp.co.developNoticeBoard.action.cmn001.LoginAction" method="execute">
-            <result name="success">/view/jsp/cmn001/login.jsp</result>
-        </action>
-
-
-        <!-- ログイン処理アクション -->
-        <action name="login" class="jp.co.developNoticeBoard.action.cmn001.LoginAction" method="login">
-            <result name="ngProcess" type="chain">index</result>
-            <result name="success" type="chain">noticeBoardMain</result>
-        </action>
-
-
-
-        <!-- 開示版リスト -->
-        <action name="noticeBoardMain" class="jp.co.developNoticeBoard.action.brd001.Brd001Action" method="execute">
-            <interceptor-ref name="cmnChk"/>
-            <result name="success">/view/jsp/brd001/brd001.jsp</result>
-        </action>
-
     </package>
+
+
+    <!-- ログイン関連画面 -->
+    <include file="strutsActionPakage/cmn001.xml"/>
+    <!-- 掲示板関連画面 -->
+    <include file="strutsActionPakage/brd001.xml"/>
 </struts>

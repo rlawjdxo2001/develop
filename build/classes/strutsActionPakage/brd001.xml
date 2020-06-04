@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+    <!-- 掲示板のリスト関連パッケージ -->
+    <package name="brd001" extends="default" namespace="/noticeBoard">
+
+        <!-- 開示版リスト -->
+        <action name="noticeBoardMain" class="jp.co.developNoticeBoard.action.brd001.Brd001Action" method="execute">
+            <interceptor-ref name="cmnChk"/>
+            <result name="success">/view/jsp/brd001/brd001.jsp</result>
+        </action>
+
+    </package>
+</struts>

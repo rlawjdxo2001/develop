@@ -7,6 +7,11 @@ import com.ibatis.common.resources.Resources;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 
+/**
+ * マッパー取得ユーティリティ
+ * @author Kim.jungtae
+ *
+ */
 public class SqlMapLocator {
 
 	public static SqlMapClient getMapper() {

@@ -1,7 +1,12 @@
 package jp.co.developNoticeBoard.dto;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
+/**
+ * CMN_USER_TABLE用のDTO
+ * @author Kim.jungtae
+ *
+ */
 public class CmnUserTableDto {
 
 	//ユーザSEQ
@@ -13,11 +18,11 @@ public class CmnUserTableDto {
     //登録者ID
     private String createUser;
     //登録日時
-    private Timestamp createDt;
+    private Date createDt;
     //更新者ID
     private String modiUser;
     //更新日時
-    private Timestamp modiDt;
+    private Date modiDt;
     //更新プログラム
     private String modiProgram;
 	public int getUserSeq() {
@@ -44,10 +49,10 @@ public class CmnUserTableDto {
 	public void setCreateUser(String createUser) {
 		this.createUser = createUser;
 	}
-	public Timestamp getCreateDt() {
+	public Date getCreateDt() {
 		return createDt;
 	}
-	public void setCreateDt(Timestamp createDt) {
+	public void setCreateDt(Date createDt) {
 		this.createDt = createDt;
 	}
 	public String getModiUser() {
@@ -56,10 +61,10 @@ public class CmnUserTableDto {
 	public void setModiUser(String modiUser) {
 		this.modiUser = modiUser;
 	}
-	public Timestamp getModiDt() {
+	public Date getModiDt() {
 		return modiDt;
 	}
-	public void setModiDt(Timestamp modiDt) {
+	public void setModiDt(Date modiDt) {
 		this.modiDt = modiDt;
 	}
 	public String getModiProgram() {
@@ -68,9 +73,6 @@ public class CmnUserTableDto {
 	public void setModiProgram(String modiProgram) {
 		this.modiProgram = modiProgram;
 	}
-
-
-
 
 
 }

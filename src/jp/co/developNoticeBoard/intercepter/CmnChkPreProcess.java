@@ -9,8 +9,8 @@ import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
 /**
- * [cmnChkPreProcessのアクションクラス]<br>
- * <br>invocation
+ * 共通チェックインターセプター
+ * １．セッションチェックインターセプター
  * @author jungtae1.kim
  */
 public class CmnChkPreProcess extends AbstractInterceptor{

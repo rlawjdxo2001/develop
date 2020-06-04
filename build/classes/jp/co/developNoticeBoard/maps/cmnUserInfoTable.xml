@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="getCmnUserInfoTableParameterMap" type="jp.co.developNoticeBoard.dto.CmnUserInfoTableDto"/>
+
+    <resultMap class="jp.co.developNoticeBoard.dto.CmnUserInfoTableDto" id="getCmnUserInfoTableResultMap">
+        <result property="userSeq" column="userSeq"/>
+        <result property="userFirstName" column="userFirstName"/>
+        <result property="userLastName" column="userLastName"/>
+        <result property="userEmail" column="userEmail"/>
+        <result property="userPhoneNumber" column="userPhoneNumber"/>
+        <result property="userAddress1" column="userAddress1"/>
+        <result property="userAddress2" column="userAddress2"/>
+        <result property="createUser" column="createUser"/>
+        <result property="createDt" column="createDt"/>
+        <result property="modiUser" column="modiUser"/>
+        <result property="modiDt" column="modiDt"/>
+        <result property="modiProgram" column="modiProgram"/>
+    </resultMap>
+
+    <!-- ログイン情報取得 -->
+    <select id="getCmnUserInfoTable" parameterClass="getCmnUserInfoTableParameterMap" resultMap="getCmnUserInfoTableResultMap">
+		SELECT
+		    userSeq AS userSeq
+		    , userFirstName AS userFirstName
+		    , userLastName AS userLastName
+		    , userEmail AS userEmail
+		    , userPhoneNumber AS userPhoneNumber
+		    , userAddress1 AS userAddress1
+		    , userAddress2 AS userAddress2
+		    , createUser AS createUser
+		    , createDt AS createDt
+		    , modiUser AS modiUser
+		    , modiDt AS modiDt
+		    , modiProgram AS modiProgram
+		FROM
+		    CMN_USER_INFO_TABLE
+		WHERE
+			userSeq = #userSeq#
+    </select>
+
+</sqlMap>
