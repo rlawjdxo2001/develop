@@ -3,6 +3,11 @@ package jp.co.developNoticeBoard.action.brd001;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * 掲示板リストのアクション（フレームだけ）
+ * @author Raisin03
+ *
+ */
 public class Brd001Action {
 
     /* ロガー */

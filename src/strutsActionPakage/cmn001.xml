@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- アクションのパッケージ定義 -->
+    <package name="cmn001" extends="default" namespace="/login">
+
+        <!-- ログイン画面 -->
+        <action name="index" class="jp.co.developNoticeBoard.action.cmn001.Cmn001Action" method="execute">
+            <result name="success">/view/jsp/cmn001/cmn001.jsp</result>
+        </action>
+
+        <!-- ログイン処理アクション -->
+        <action name="login" class="jp.co.developNoticeBoard.action.cmn001.Cmn001Action" method="login">
+            <result name="ngProcess" type="redirect">../login/index</result>
+            <result name="success" type="redirect">../noticeBoard/noticeBoardMain</result>
+        </action>
+
+    </package>
+</struts>
