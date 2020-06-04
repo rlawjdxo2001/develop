@@ -15,7 +15,6 @@
         </global-results>
     </package>
 
-
     <!-- ログイン関連画面 -->
     <include file="strutsActionPakage/cmn001.xml"/>
     <!-- 掲示板関連画面 -->
