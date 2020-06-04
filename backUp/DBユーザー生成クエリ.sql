@@ -1,4 +1,4 @@
-create database noticeBoardAdmin
+create database developnoticeboard
 
 create user 'noticeBoardAdmin'@'localhost' identified by 'raisin0420';
 
